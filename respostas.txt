@@ -1,0 +1,18 @@
+1]
+	a) - Para M = 4	  : 3
+	   - Para M = 5	  : 12
+	   - Para M = 7	  : 12
+	   - Para M = 10  : 6
+
+
+	b) Basta dividir 2*pi pela velocidade angular e econtrar o primeiro multiplo inteiro dessa divisão, ou seja, N/gdc(N,M).
+
+2]
+	a) 4
+	b) 4
+	c) 16
+
+
+3] (em anexo)
+
+4]
