@@ -1,0 +1,11 @@
+2)	Apartir do gráfico podemos observar que os períodos dos sinais são:
+	a) Observando o gráfico o período fundamental é T = 4.
+	   Agora vamos calcular para verificar: o período do termo seno é 
+	
+	b) Observando o gráfico o período fundamental é T = 4.
+		Agora vamos calcular para verificar: sabemos que cos²(t) = (1 + cos(2*t))/2
+		Logo: 1/2 + (cos((pi*n)/2)) / 2 , assim T = 2*pi / w
+		T = (2*pi) / pi/2. Dessa forma T = 4.
+	
+	c) Observando o gráfico o período fundamental é T = 16.
+		Agora vamos calcular para verificar: primeiro vamos calcular o período do primeiro termo que é T1 = 8 e o período de segundo termo que é T = 16 calculando o MMC dos dois períodos chegamos a conclusão que o período fundamental do sinal formado pela multiplicação dos dois é T = 16.

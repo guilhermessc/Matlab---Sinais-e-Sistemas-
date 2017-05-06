@@ -1,0 +1,29 @@
+1)
+	a) 
+	-	Primeiro para o sinal em que M = 4. Percebemos a partir do gráfico que seu período fundamental é 3.
+
+	-	Para o sinal em que M = 5. Percebemos a partir do gráfico que seu período fundamental é 12.
+
+	-	Para o sinal em que M = 7. Percebemos a partir do gráfico que seu período fundamental é 12.
+
+	-	Para o sinal em que M = 10. Percebemos a partir do gráfico que seu período fundamental é 6.
+
+	b) Vamos analisar a função x[n] = sen((2*pi*M*n)/N) sabemos que o período de uma função contínua sen (w*n) é T = 2*pi/w logo subistituindo
+	temos:
+			Tc = (2*pi) / ((2*pi*M)/N) = N / M
+	
+	Mas como nosso sinal é discreto temos que achar um k em que multiplicado pelo perído dê um número inteiro para que o período seja multiplo de 2*pi.
+
+			Td = k * (N / M)
+
+	Mas primeiro devemos simplificar a equação tirando o mdc entre N e M e dividindo por ele assim:
+
+			Td = k * ((N/mdc(N,M)) / (M / mdc(N,M)))
+
+	Para transformar essa frção em inteiro percebemos que k deve ser igual ao denominador.
+
+			Logo: k = M / mdc (N,M)
+
+			Subistituindo: Td = N / mdc(N, M)
+
+	Śe aplicarmos essa fórmula na letra 'a' vemos que o resultado é igual ao período observado graficamente. 
