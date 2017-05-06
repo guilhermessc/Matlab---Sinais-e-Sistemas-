@@ -15,4 +15,8 @@
 
 3] (em anexo)
 
-4]
+4] (As justificativas gráficas se encontram em anexo)
+
+	a) Invariante no tempo, não linear, causal e instável
+	b) Variante no tempo, linear, causal e instável
+	c) Invariante no tempo, linear, causal e instável
