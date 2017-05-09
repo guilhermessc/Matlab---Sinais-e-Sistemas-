@@ -1,3 +1,6 @@
+% enviar para wmr mss8
+
+
 % M = input('digite um numero:	');
 
 % y = f1(M,12);
