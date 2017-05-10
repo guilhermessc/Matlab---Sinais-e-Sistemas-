@@ -1,8 +1,10 @@
 % main script
 
 %%% Read the image from file
-im = imread('hello.png');
+% im = imread('hello.png');
 % im = imread('fruits.png');
+% im = imread('placas.jpeg');
+im = imread('placas2.jpg');
 image(im);
 
 %%% Put image to gray scale
