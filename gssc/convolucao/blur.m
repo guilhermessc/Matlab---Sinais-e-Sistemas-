@@ -8,7 +8,7 @@ function y = blur(x)
 				1,4,4,4,1;
 				1,1,1,1,1	
 			];
-			
+
 	filtro = filtro/sum(sum(filtro));
 
 	y = conv2(x, filtro, 'same');
