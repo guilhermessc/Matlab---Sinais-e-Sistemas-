@@ -1,0 +1,9 @@
+1]	A concolução foi util para percorrer todo o vetor comparando as variações em cada ponto
+	Resposta do exemplo: imagem Q1 anexada.
+
+2]	Retorna a propria imagem. (imagem Q2 anexada)
+
+3]	Retorna a imagem borrada (blurred). (imagem Q3 anexada)
+
+4]	Retorna as bordas laterais da imagem. (imagem Q4 anexada)
+
