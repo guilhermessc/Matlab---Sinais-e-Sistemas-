@@ -1,6 +1,7 @@
 array = [100 120 124 125 122 123 154 21 23 22 28 21 21 22 255 253 252];
 kernel = [1 -1];
-result = conv(array,kernel,'same');
+%result = conv(array,kernel,'same');
+result = myconv(array,kernel);
 menor = result(1);
 index = 1;
 for i = 2:length(result)
