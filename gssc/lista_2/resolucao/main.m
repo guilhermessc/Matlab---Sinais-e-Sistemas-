@@ -89,5 +89,5 @@ subplot(2, 2, 2), image(sigf(final5));
 title('delta nitidez');
 subplot(2, 2, 3), image(gray5 - sigf(final5));
 title('nitidez');
-subplot(2, 2, 4), image(gray5 - 3*sigf(final5));
+subplot(2, 2, 4), image(gray5 - 2*sigf(final5));
 title('nitidez++');
