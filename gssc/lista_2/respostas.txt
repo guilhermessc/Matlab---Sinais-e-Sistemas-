@@ -7,3 +7,9 @@
 
 4]	Retorna as bordas laterais da imagem. (imagem Q4 anexada)
 
+5]	Existem 2 formas de se obter nitidez em uma imagem: 
+	Aumentando a acutância ou a resolução.
+	Resolvi então aumentar a acutância aumentando
+	as transições de informação nas bordas da imagem.
+
+	Para isso usei mais de um kernel e combinei os resultados.
