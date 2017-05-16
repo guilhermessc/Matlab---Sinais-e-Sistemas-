@@ -62,41 +62,41 @@ subplot(1, 2, 2), image(final4);
 title('depois');
 
 
-%  5a questão
-figure();
+% %  5a questão
+% figure();
 
-kernel5 = [	-1,0,1;
-			-2,0,2;
-			-1,0,1];
+% kernel5 = [	-1,0,1;
+% 			-2,0,2;
+% 			-1,0,1];
 
-im5  = imread('slovenia-black-and-white-gear-patrol.jpg');
+% im5  = imread('slovenia-black-and-white-gear-patrol.jpg');
 
-gray5 = double(rgb2gray(im5));
-subplot(2, 2, 1), image(gray5);
-title('antes');
+% gray5 = double(rgb2gray(im5));
+% subplot(2, 2, 1), image(gray5);
+% title('antes');
 
-horizontal_edges5 = convol( gray5, kernel5);
-subplot(2, 2, 2), image(horizontal_edges5);
-title('horizontal_edges');
+% horizontal_edges5 = convol( gray5, kernel5);
+% subplot(2, 2, 2), image(horizontal_edges5);
+% title('horizontal_edges');
 
-vertical_edges5 = convol( gray5, kernel5');
-subplot(2, 2, 3), image(vertical_edges5);
-title('vertical_edges');
+% vertical_edges5 = convol( gray5, kernel5');
+% subplot(2, 2, 3), image(vertical_edges5);
+% title('vertical_edges');
 
-final5 = sqrt(horizontal_edges5.^2 + vertical_edges5.^2);
-subplot(2, 2, 4), image(sigf(final5));
-title('delta nitidez');
+% final5 = sqrt(horizontal_edges5.^2 + vertical_edges5.^2);
+% subplot(2, 2, 4), image(sigf(final5));
+% title('delta nitidez');
 
-figure();
-subplot(2, 2, 1), image(gray5);
-title('original');
-subplot(2, 2, 2), image(sigf(final5));
-title('delta nitidez');
-subplot(2, 2, 3), image(gray5 - sigf(final5));
-title('nitidez');
-subplot(2, 2, 4), image(gray5 - 2*sigf(final5));
-title('nitidez++');
-colormap(gray(256));
+% figure();
+% subplot(2, 2, 1), image(gray5);
+% title('original');
+% subplot(2, 2, 2), image(sigf(final5));
+% title('delta nitidez');
+% subplot(2, 2, 3), image(gray5 - sigf(final5));
+% title('nitidez');
+% subplot(2, 2, 4), image(gray5 - 2*sigf(final5));
+% title('nitidez++');
+% colormap(gray(256));
 
 
 %  5a questão resolução com um kernel
