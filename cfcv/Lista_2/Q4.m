@@ -3,6 +3,7 @@ gray = rgb2gray(img);
 imshow(gray);
 
 kernel = [-1 0 1; -2 0 2; -1 0 1];
+%result = uint8(myconv2(gray,kernel));
 result = uint8(conv2(double(gray),double(kernel),'same'));
 figure();
 imshow(result);
