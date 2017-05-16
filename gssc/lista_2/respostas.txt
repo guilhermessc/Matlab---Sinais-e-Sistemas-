@@ -12,4 +12,6 @@
 	Resolvi então aumentar a acutância aumentando
 	as transições de informação nas bordas da imagem.
 
-	Para isso usei mais de um kernel e combinei os resultados.
+	Para isso usei 2 metodos: 
+		mais de um kernel e combinação de resultados.
+		um kernel.

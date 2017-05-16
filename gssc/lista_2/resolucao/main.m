@@ -58,36 +58,60 @@
 % title('depois');
 
 
-%  5a questão
+% %  5a questão
 
-kernel5 = [	-1,0,1;
-			-2,0,2;
-			-1,0,1];
+% kernel5 = [	-1,0,1;
+% 			-2,0,2;
+% 			-1,0,1];
 
-im5  = imread('slovenia-black-and-white-gear-patrol.jpg');
+% im5  = imread('slovenia-black-and-white-gear-patrol.jpg');
 
-gray5 = double(rgb2gray(im5));
-subplot(2, 2, 1), image(gray5);
+% gray5 = double(rgb2gray(im5));
+% subplot(2, 2, 1), image(gray5);
+% title('antes');
+
+% horizontal_edges5 = conv2( gray5, kernel5, 'same');
+% subplot(2, 2, 2), image(horizontal_edges5);
+% title('horizontal_edges');
+
+% vertical_edges5 = conv2( gray5, kernel5', 'same');
+% subplot(2, 2, 3), image(vertical_edges5);
+% title('vertical_edges');
+
+% final5 = sqrt(horizontal_edges5.^2 + vertical_edges5.^2);
+% subplot(2, 2, 4), image(sigf(final5));
+% title('delta nitidez');
+
+% figure();
+% subplot(2, 2, 1), image(gray5);
+% title('original');
+% subplot(2, 2, 2), image(sigf(final5));
+% title('delta nitidez');
+% subplot(2, 2, 3), image(gray5 - sigf(final5));
+% title('nitidez');
+% subplot(2, 2, 4), image(gray5 - 2*sigf(final5));
+% title('nitidez++');
+% colormap(gray(256));
+
+
+%  5a questão resolução com um kernel
+
+im5b  = imread('slovenia-black-and-white-gear-patrol.jpg');
+
+nit = -0.05;
+kernel5b = [nit,nit,nit;
+			nit, 1 ,nit;
+			nit,nit,nit];
+
+kernel5b = (1/(sum(sum(kernel5b)))) * kernel5b;
+
+gray5b = rgb2gray(im5b);
+subplot(1, 2, 1), image(gray5b);
 title('antes');
 
-horizontal_edges5 = conv2( gray5, kernel5, 'same');
-subplot(2, 2, 2), image(horizontal_edges5);
-title('horizontal_edges');
+final5b = conv2( gray5b, kernel5b, 'same');
+subplot(1, 2, 2), image(final5b);
+title('depois');
+colormap(gray(256));
 
-vertical_edges5 = conv2( gray5, kernel5', 'same');
-subplot(2, 2, 3), image(vertical_edges5);
-title('vertical_edges');
 
-final5 = sqrt(horizontal_edges5.^2 + vertical_edges5.^2);
-subplot(2, 2, 4), image(sigf(final5));
-title('delta nitidez');
-
-figure();
-subplot(2, 2, 1), image(gray5);
-title('original');
-subplot(2, 2, 2), image(sigf(final5));
-title('delta nitidez');
-subplot(2, 2, 3), image(gray5 - sigf(final5));
-title('nitidez');
-subplot(2, 2, 4), image(gray5 - 2*sigf(final5));
-title('nitidez++');
