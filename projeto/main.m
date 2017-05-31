@@ -21,10 +21,17 @@ subplot(2, 3, 3), image(gauss);
 title('gaussian');
 
 %%% Find the edges
-contours = sobel(gauss);
-subplot(2, 3, 4), image(contours);
-title('sobel2');
+n_max_sup = non_max_supression(gauss);
+subplot(2, 3, 4), image(uint8(n_max_sup));
+title('non_max_supresion');
 
+theta = grad_dir(gauss);
+subplot(2, 3, 5), image((256/(2*pi))*theta);
+title('theta');
+
+sob = sobel(gauss);
+subplot(2, 3, 6), image(uint8(sob));
+title('sobel');
 
 
 colormap gray;

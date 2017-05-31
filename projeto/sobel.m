@@ -3,8 +3,6 @@ function edge_all = sobel(gray_im)
 
 	x = [1, 2, 1; 0,0,0; -1, -2, -1];
 
-	% edge_im_vert = conv2(gray_im, x, 'same');
-	% edge_im_horiz = conv2(gray_im, x', 'same');
 	edge_im_vert = double (convol(gray_im, x));
 	edge_im_horiz = double (convol(gray_im, x'));
 
