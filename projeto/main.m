@@ -25,4 +25,6 @@ contours = sobel(gauss);
 subplot(2, 3, 4), image(contours);
 title('sobel2');
 
+
+
 colormap gray;
