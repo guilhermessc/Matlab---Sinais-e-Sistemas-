@@ -30,8 +30,16 @@ subplot(2, 3, 5), image((256/(2*pi))*theta);
 title('theta');
 
 sob = sobel(gauss);
-subplot(2, 3, 6), image(uint8(sob));
-title('sobel');
+subplot(2, 3, 6);
+title('not sobel');
 
+max_img_thrsh = uint8(n_max_sup);
+max_img_thrsh(max_img_thrsh > 45) = 1;
+max_img_thrsh(max_img_thrsh < 45) = 0;
+image(250*max_img_thrsh);
+max_img_thrsh = max_img_thrsh.*uint8(n_max_sup);
 
 colormap gray;
+
+% h = hist_vec(n_max_sup);
+% stem(h);
