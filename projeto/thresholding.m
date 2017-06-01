@@ -1,43 +1,23 @@
 %% thresholding: function description
-function [minv, maxv] = thresholding(gray_img)
+function y = thresholding(gray_img)
 
-	h = hist_vec(gray_img);
-	len = length(h)
+	[Th_i, Th_s] = get_limits(gray_img); 
 
-	score = 3*sum(h)*len^3;
+	aux = gray_img;
 
-	a=0;
-	b=0;
-	c=0;
+	aux(aux < Th_i) = 0;
+	aux(aux >= Th_i & aux < Th_s) = 1;
+	aux(aux >= Th_s) = 2;
 
-	dom = [1:len];
-	h = h.^3;
+	aux_max = aux;
+	aux_max(aux_max < 2) = 0;
 
-	for x = [1:ceil(len/100):len]
-		x/len*100
-		for y = [1:ceil(len/100):len]
-			for z = [1:ceil(len/100):len]
+	kernel = [1, 1, 1; 1, 0, 1; 1, 1, 1];
 
-				part_score = 0;
+	strong_neighbor = convol(aux_max, kernel);
+	to_keep = aux .* strong_neighbor + aux_max;
+	to_keep(to_keep > 0) = 1;
 
-				main_vec = [(((dom*0+1)*x)-dom).^2;(((dom*0+1)*y)-dom).^2;(((dom*0+1)*z)-dom).^2];
-				part_score = part_score + sum(min(main_vec).*h);
-
-				if (part_score < score)
-					score = part_score;
-					a = x;
-					b = y;
-					c = z;
-				end
-
-			end
-		end
-	end
-
-	v = [a, b, c];
-
-	maxv = (sum(v) - min(v))/2
-	minv = (sum(v) - max(v))/2
+	y = gray_img.*to_keep;
 
 end
-	
