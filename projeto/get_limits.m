@@ -10,7 +10,7 @@ function [inferior, superior] = get_limits(gray_img)
 		if (parcial_sum < total/8)
 			inferior = i;
 
-		elseif (parcial_sum < total*(1-1/4))
+		elseif (parcial_sum < total*(1-1/3))
 			superior = i;
 		end
 	end
