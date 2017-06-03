@@ -14,5 +14,4 @@ function [inferior, superior] = get_limits(gray_img)
 			superior = i;
 		end
 	end
-	[inferior, superior]
 end

@@ -1,4 +1,3 @@
-% function [edge_all, gray, edge_im_vert, edge_im_horiz] = edges(im)
 function edge_all = sobel(gray_im)
 
 	x = [1, 2, 1; 0,0,0; -1, -2, -1];
