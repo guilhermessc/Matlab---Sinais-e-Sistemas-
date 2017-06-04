@@ -32,8 +32,4 @@ function y = convol(mat, krn)
 
 		end
 	end
-
-
-
-
 end
