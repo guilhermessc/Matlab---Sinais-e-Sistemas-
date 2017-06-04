@@ -1,6 +1,7 @@
 %% hist_vec: function description
 function h = hist_vec(gray_img)
 
+	gray_img = double(gray_img);
 	max_val = floor(max(max(gray_img)));
 	min_val = 1;
 

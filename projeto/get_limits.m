@@ -5,6 +5,9 @@ function [inferior, superior] = get_limits(gray_img)
 	total = sum(h);
 	parcial_sum = 0;
 
+	superior = 1;
+	inferior = 1;
+
 	for i = [1:length(h)]
 		parcial_sum = parcial_sum + h(i);
 		if (parcial_sum < total/8)

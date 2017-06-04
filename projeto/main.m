@@ -14,28 +14,12 @@ im = imread('input/moto.jpg');
 
 %%% Put image to gray scale
 % gray = (0.2989 * double(im(:,:,1)) + 0.5870 * double(im(:,:,2)) + 0.1140 * double(im(:,:,3)))/255;
+figure();
 gray = rgb2gray(im);
 print_edges(gray);
+
 figure();
-
-% [sobelr, cannyr, laplacer] = print_edges(double(im(:,:,1)));
-% figure();
-% [sobelg, cannyg, laplaceg] = print_edges(double(im(:,:,2)));
-% figure();
-% [sobelb, cannyb, laplaceb] = print_edges(double(im(:,:,3)));
-% figure();
-
-
-% final_sobel = sqrt(sobelr.^2 + sobelg.^2 + sobelb.^2);
-% image(final_sobel);
-% figure();
-
-
-% final_canny = sqrt(cannyr.^2 + cannyg.^2 + cannyb.^2);
-% image(final_canny);
-% figure();
-
-
-% final_laplace = sqrt(double(laplacer).^2 + double(laplaceg).^2 + double(laplaceb).^2);
-% image(final_laplace);
-% figure();
+lll = laplacian(gray);
+lll = lll;
+dtsh = thresholding(uint8(lll));
+image(dtsh);
