@@ -8,8 +8,8 @@
 % im = imread('input/placas2.jpg');
 % im = imread('input/slovenia-black-and-white-gear-patrol.jpg');
 % im = imread('input/la_fille.png');
-% im = imread('input/tour_eiffel.png');
-im = imread('input/moto.jpg');
+im = imread('input/tour_eiffel.png');
+% im = imread('input/moto.jpg');
 
 
 %%% Put image to gray scale
@@ -18,8 +18,7 @@ figure();
 gray = rgb2gray(im);
 print_edges(gray);
 
-figure();
-lll = laplacian(gray);
-lll = lll;
-dtsh = thresholding(uint8(lll));
-image(dtsh);
+%%% Extra, not in the original project
+%%% Unconmmet to try XD
+% canny_laplace(gray);
+% colormap gray;
