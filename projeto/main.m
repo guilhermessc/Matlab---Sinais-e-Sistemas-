@@ -8,14 +8,14 @@
 % im = imread('input/placas2.jpg');
 % im = imread('input/slovenia-black-and-white-gear-patrol.jpg');
 % im = imread('input/la_fille.png');
-im = imread('input/tour_eiffel.png');
+% im = imread('input/tour_eiffel.png');
 % im = imread('input/moto.jpg');
-%im = imread('input/dubai.jpg');
-%im = imread('input/mar.jpg');
-%im = imread('input/paraiso.jpg');
-%im = imread('input/printemps.jpg');
-%im = imread('input/tigre.jpg');
-%im = imread('input/town.jpg');
+% im = imread('input/dubai.jpg');
+% im = imread('input/mar.jpg');
+% im = imread('input/paraiso.jpg');
+% im = imread('input/printemps.jpg');
+% im = imread('input/tigre.jpg');
+im = imread('input/town.jpg');
 
 %%% Put image to gray scale
 % gray = (0.2989 * double(im(:,:,1)) + 0.5870 * double(im(:,:,2)) + 0.1140 * double(im(:,:,3)))/255;
