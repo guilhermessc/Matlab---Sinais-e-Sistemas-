@@ -18,7 +18,7 @@ title('canny');
 
 
 %%% Apply laplace
-lap = uint8(laplacian(gray, 3, 1.4));
+lap = uint8(laplacian(gray, 4, 1.4));
 subplot(2, 2, 4), image(lap);
 title('laplacian');
 
